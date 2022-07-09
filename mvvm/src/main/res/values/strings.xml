@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MVVM Architecture App</string>
+    <string name="non_accept">Non-Accept</string>
+    <string name="accept">Accept</string>
+    <string name="please_waiting_a_few_second">Please, waiting a few second ...</string>
+    <string name="loading">Loading</string>
+    <string name="app_has_longest_usage_time">App has longest usage time</string>
+    <string name="app_has_used_in_day">App has used in day</string>
+    <string name="permission_description">In order to allow this application to collect your apps usage information, you need to allow "Package Usage Stats" permission from the Settings application.\nYou can cancel this permission anytime.</string>
+    <string name="enable_usage_stats_permission">Enable Usage Stats Permission</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="start_service">Start Service</string>
+</resources>

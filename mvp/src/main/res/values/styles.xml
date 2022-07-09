@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tv_app_name_style">
+        <item name="android:textSize">@dimen/medium_text_dimens</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:textColor">@color/text_primary_color</item>
+    </style>
+
+    <style name="tv_title_style">
+        <item name="android:textSize">@dimen/medium_text_dimens</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

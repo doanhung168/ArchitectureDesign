@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MVP Architecture App</string>
+    <string name="request_permission_quote">UsageStatsPermission help us read your history of the usage, click Accept to accept this permission for us</string>
+    <string name="non_accept">Non-Accept</string>
+    <string name="accept">Accept</string>
+    <string name="please_waiting_a_few_second">Please, waiting a few second ...</string>
+    <string name="loading">Loading</string>
+    <string name="app_has_longest_usage_time">App has longest usage time</string>
+    <string name="app_has_used_in_day">App has used in day</string>
+    <string name="you_need_let_us_permission_to_get_history_of_app_usage">You need let us permission to get history of app usage</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="start_service">Start Service</string>
+</resources>

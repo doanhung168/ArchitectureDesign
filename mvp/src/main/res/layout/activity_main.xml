@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_LongestUsageTimeApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvAppLongestUsageTimeTitle"
+            style="@style/tv_title_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/medium_dimens"
+            android:layout_marginEnd="@dimen/medium_dimens"
+            android:text="@string/app_has_longest_usage_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imvLongestUsageTimeAppIcon"
+            android:layout_width="@dimen/above_extreme_dimens"
+            android:layout_height="@dimen/above_extreme_dimens"
+            android:layout_marginStart="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/medium_dimens"
+            android:layout_marginBottom="@dimen/medium_dimens"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAppLongestUsageTimeTitle"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvLongestUsageTimeAppName"
+            style="@style/tv_app_name_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_dimens"
+            android:layout_marginEnd="@dimen/medium_dimens"
+            app:layout_constraintBottom_toBottomOf="@+id/imvLongestUsageTimeAppIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imvLongestUsageTimeAppIcon"
+            app:layout_constraintTop_toTopOf="@+id/imvLongestUsageTimeAppIcon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_InfoApps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_LongestUsageTimeApp">
+
+        <TextView
+            style="@style/tv_title_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_dimens"
+            android:layout_marginTop="@dimen/medium_dimens"
+            android:text="@string/app_has_used_in_day" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvInfoApps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/medium_dimens"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appLongestUsageTimeLayout" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRequestMessage"
+        style="@style/tv_app_name_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_dimens"
+        android:layout_marginEnd="@dimen/medium_dimens"
+        android:gravity="center"
+        android:text="@string/you_need_let_us_permission_to_get_history_of_app_usage"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--    Placeholder for loading data situation  -->
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/frameLongestUsageTimeApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_LongestUsageTimeAppPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAppLongestUsageTimeTitlePlaceholder"
+                style="@style/tv_title_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_dimens"
+                android:layout_marginTop="@dimen/medium_dimens"
+                android:layout_marginEnd="@dimen/medium_dimens"
+                android:background="@color/light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imvLongestUsageTimeAppIconPlaceholder"
+                android:layout_width="@dimen/above_extreme_dimens"
+                android:layout_height="@dimen/above_extreme_dimens"
+                android:layout_marginStart="@dimen/medium_dimens"
+                android:layout_marginTop="@dimen/medium_dimens"
+                android:layout_marginBottom="@dimen/medium_dimens"
+                android:background="@color/light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAppLongestUsageTimeTitlePlaceholder"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvLongestUsageTimeAppNamePlaceholder"
+                style="@style/tv_app_name_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_dimens"
+                android:layout_marginEnd="@dimen/medium_dimens"
+                android:background="@color/light"
+                app:layout_constraintBottom_toBottomOf="@+id/imvLongestUsageTimeAppIconPlaceholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imvLongestUsageTimeAppIconPlaceholder"
+                app:layout_constraintTop_toTopOf="@+id/imvLongestUsageTimeAppIconPlaceholder" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/frameInfoApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLongestUsageTimeApp">
+
+
+        <LinearLayout
+            android:id="@+id/layout_InfoAppsPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_LongestUsageTimeApp">
+
+            <TextView
+                style="@style/tv_title_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_dimens"
+                android:layout_marginTop="@dimen/medium_dimens"
+                android:background="@color/light" />
+
+            <include layout="@layout/info_app_item_placeholder" />
+
+            <include layout="@layout/info_app_item_placeholder" />
+
+            <include layout="@layout/info_app_item_placeholder" />
+
+            <include layout="@layout/info_app_item_placeholder" />
+
+            <include layout="@layout/info_app_item_placeholder" />
+
+            <include layout="@layout/info_app_item_placeholder" />
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
