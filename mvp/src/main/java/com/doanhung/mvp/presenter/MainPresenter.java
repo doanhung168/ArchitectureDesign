@@ -27,10 +27,6 @@ public class MainPresenter implements MainContract.MainPresenter {
     private List<InfoApp> mInfoAppList;
     private InfoApp mLongestUsageTimeApp;
 
-    public List<InfoApp> getInfoAppList() {
-        return mInfoAppList;
-    }
-
     public Handler handler = new Handler(Looper.getMainLooper());
 
     @Override
@@ -62,6 +58,12 @@ public class MainPresenter implements MainContract.MainPresenter {
                 mMainView.triggerLoadingLongestTimeApp(false);
             });
         }).start();
+    }
+
+
+    @Override
+    public boolean enableToLoadData() {
+        return mInfoAppList == null;
     }
 
     @NonNull

@@ -24,5 +24,11 @@ public interface MainContract {
 
         void getInfoAppListAndLongestUsageTimeApp(Application application);
 
+        /**
+         * if have data already, it will be not load again
+         * @return allow load data
+         */
+        boolean enableToLoadData();
+
     }
 }

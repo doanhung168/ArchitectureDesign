@@ -79,8 +79,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
     private void actionToGetData() {
         if (checkUsageStatsPermission()) {
             mBinding.tvRequestMessage.setVisibility(INVISIBLE);
-            // check to not to load data again
-            if (mMainPresenter.getInfoAppList() == null) {
+            if (mMainPresenter.enableToLoadData()) {
                 mMainPresenter.getInfoAppListAndLongestUsageTimeApp(getApplication());
             }
         } else {
